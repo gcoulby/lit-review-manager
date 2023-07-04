@@ -1,6 +1,6 @@
 {
-  "name": "csv-filter-ts",
-  "homepage": "https://gcoulby.github.io/csv-filter",
+  "name": "lit-review-manager",
+  "homepage": "https://gcoulby.github.io/lit-review-manager",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
