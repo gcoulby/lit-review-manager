@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.css";
 import Nav from "./components/nav";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import NewReviewForm from "./pages/new-review-form";
 import ReviewList from "./pages/reviews";
 import React, { useState } from "react";
