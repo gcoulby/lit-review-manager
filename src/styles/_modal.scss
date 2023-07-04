@@ -1,0 +1,21 @@
+.modal-sheet {
+  position: absolute !important;
+  background: none !important;
+}
+
+.overlay {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute !important;
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.modal-open {
+  height: 95vh;
+  overflow: hidden;
+}

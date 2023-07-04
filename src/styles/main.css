@@ -1,0 +1,52 @@
+#drop_zone {
+  border-radius: 5px;
+  padding: 5em;
+  text-align: center;
+  color: #bbb;
+  border: 2px dashed #bbb;
+}
+
+#category {
+  padding: 0;
+}
+#category li {
+  list-style: none;
+  text-align: left;
+  font-size: 25px;
+}
+
+body,
+#root {
+  margin-top: 0;
+}
+
+.page-container {
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+
+svg {
+  margin-bottom: 0.2em;
+}
+
+.modal-sheet {
+  position: absolute !important;
+  background: none !important;
+}
+
+.overlay {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute !important;
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.modal-open {
+  height: 95vh;
+  overflow: hidden;
+}/*# sourceMappingURL=main.css.map */
