@@ -92,7 +92,7 @@ function ArticleTable({
                       <FaRegEye /> Abstract
                     </button>
                     <button
-                      className="btn btn-sm btn-outline-dark ms-2"
+                      className={`btn btn-sm btn${article.gpt_response === "" ? "-outline" : ""}-dark ms-2`}
                       onClick={() => {
                         context.setModalContent({
                           title: "GPT",
