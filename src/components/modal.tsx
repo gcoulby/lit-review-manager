@@ -56,7 +56,9 @@ function CommentsModal() {
                   data-bs-dismiss="modal"
                   onClick={() => {
                     context.modalContent?.onSave(context.modalContent?.articleId, content);
-                    // setContent("");
+                    if (context.modalContent?.editable) {
+                      setContent("");
+                    }
                     context.setShowModal(false);
                   }}
                 >
