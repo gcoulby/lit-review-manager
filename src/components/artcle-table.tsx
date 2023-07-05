@@ -115,7 +115,7 @@ function ArticleTable({
                         context.setModalContent({
                           title: "Comments",
                           articleId: article.id,
-                          content: article.comments,
+                          content: article.comments ?? "",
                           onSave: setComments,
                           editable: true,
                         });
