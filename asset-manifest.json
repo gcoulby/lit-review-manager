@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lit-review-manager/static/css/main.e98f626a.css",
-    "main.js": "/lit-review-manager/static/js/main.52dacc9d.js",
+    "main.js": "/lit-review-manager/static/js/main.a02ea516.js",
     "static/js/787.522a0a94.chunk.js": "/lit-review-manager/static/js/787.522a0a94.chunk.js",
     "index.html": "/lit-review-manager/index.html",
     "main.e98f626a.css.map": "/lit-review-manager/static/css/main.e98f626a.css.map",
-    "main.52dacc9d.js.map": "/lit-review-manager/static/js/main.52dacc9d.js.map",
+    "main.a02ea516.js.map": "/lit-review-manager/static/js/main.a02ea516.js.map",
     "787.522a0a94.chunk.js.map": "/lit-review-manager/static/js/787.522a0a94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e98f626a.css",
-    "static/js/main.52dacc9d.js"
+    "static/js/main.a02ea516.js"
   ]
 }
