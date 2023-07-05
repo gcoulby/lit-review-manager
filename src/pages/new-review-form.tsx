@@ -1,7 +1,7 @@
 import React, { ChangeEvent, DragEvent, useEffect, useState, useContext } from "react";
 import { IArticle, IContext, IReview } from "../interfaces";
 import { v4 } from "uuid";
-
+import { BiAtom } from "react-icons/bi";
 import { VscNewFile, VscSave } from "react-icons/vsc";
 import { useParams } from "react-router-dom";
 import { useLiveQuery } from "dexie-react-hooks";
@@ -94,6 +94,7 @@ function NewReviewForm() {
           link: rowSplit[headerIndices["Link"]],
           abstract: rowSplit[headerIndices["Abstract"]],
           gpt_response: "",
+          comments: "",
         });
       });
       setArticles(newArticles);

@@ -34,6 +34,7 @@ export interface IArticle {
   link: string;
   abstract: string;
   gpt_response: string;
+  comments: string;
 }
 
 export interface IAuthor {

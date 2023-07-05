@@ -38,6 +38,17 @@ function Review(props: any) {
     await db.reviews.put(foundReview);
   };
 
+  const setArticleComments = async (articleId: string, comments: string) => {
+    if (!articleId) return;
+    foundReview.articles = foundReview.articles.map((article) => {
+      if (article.id === articleId) {
+        article.comments = comments;
+      }
+      return article;
+    });
+    await db.reviews.put(foundReview);
+  };
+
   const deleteArticle = async (articleId: string) => {
     if (!articleId) return;
     foundReview.articles = foundReview.articles.filter((article) => article.id !== articleId);
@@ -71,6 +82,7 @@ function Review(props: any) {
             articles={foundReview?.articles}
             setArticleInclude={setArticleInclude}
             setGptResponse={setArticleGptResponse}
+            setComments={setArticleComments}
             deleteArticle={deleteArticle}
           />
         </>

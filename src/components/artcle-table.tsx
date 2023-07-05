@@ -1,17 +1,20 @@
 import { useContext, useState, useEffect } from "react";
 import { FaExternalLinkAlt, FaRegEye, FaTrash } from "react-icons/fa";
 import { BsPencilSquare, BsFillQuestionOctagonFill } from "react-icons/bs";
+import { BiAtom } from "react-icons/bi";
 import { IArticle } from "../interfaces";
 import { AppContext } from "../App";
 function ArticleTable({
   articles,
   setArticleInclude,
   setGptResponse,
+  setComments,
   deleteArticle,
 }: {
   articles: IArticle[];
   setArticleInclude?: any;
   setGptResponse?: any;
+  setComments?: any;
   deleteArticle?: any;
 }) {
   const context = useContext(AppContext);
@@ -75,7 +78,7 @@ function ArticleTable({
                       <FaExternalLinkAlt />
                     </a>
                   </td>
-                  <td width={"220px"}>
+                  <td width={"330px"}>
                     <button
                       className="btn btn-sm btn-outline-dark"
                       onClick={() => {
@@ -104,7 +107,22 @@ function ArticleTable({
                         context.setShowModal(true);
                       }}
                     >
-                      <BsPencilSquare /> GPT
+                      <BiAtom /> GPT
+                    </button>
+                    <button
+                      className={`btn btn-sm btn${article.comments === "" || article.comments === undefined ? "-outline" : ""}-dark ms-2`}
+                      onClick={() => {
+                        context.setModalContent({
+                          title: "Comments",
+                          articleId: article.id,
+                          content: article.comments,
+                          onSave: setComments,
+                          editable: true,
+                        });
+                        context.setShowModal(true);
+                      }}
+                    >
+                      <BsPencilSquare /> Comments
                     </button>
                     <button
                       type="button"
