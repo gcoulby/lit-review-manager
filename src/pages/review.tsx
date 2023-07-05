@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useLiveQuery } from "dexie-react-hooks";
+import { FaCopy } from "react-icons/fa";
 import { db } from "../services/db";
 import { IReview } from "../interfaces";
 import ArticleTable from "../components/artcle-table";
@@ -52,9 +53,20 @@ function Review(props: any) {
       ) : (
         <>
           <h1>Review of: {foundReview?.title}</h1>
-          <p>
-            <strong>GPT Prompt:</strong> {foundReview?.gpt_prompt}
-          </p>
+          <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+            <p>
+              <strong>GPT Prompt:</strong> {foundReview?.gpt_prompt}
+            </p>
+            <button
+              style={{ width: "250px" }}
+              className="btn btn-dark"
+              onClick={() => {
+                navigator.clipboard.writeText(foundReview?.gpt_prompt);
+              }}
+            >
+              <FaCopy /> Copy Prompt
+            </button>
+          </div>
           <ArticleTable
             articles={foundReview?.articles}
             setArticleInclude={setArticleInclude}
