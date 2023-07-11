@@ -35,6 +35,7 @@ function ArticleTable({
           <table className="table table-striped">
             <thead>
               <tr>
+                <th scope="col">Index</th>
                 {setArticleInclude && <th scope="col">Include</th>}
                 <th scope="col">Author</th>
                 <th scope="col">Title</th>
@@ -47,6 +48,7 @@ function ArticleTable({
             <tbody>
               {articles?.map((article, i) => (
                 <tr key={`review-article-${i}`}>
+                  <th scope="row">{i + 1}</th>
                   {setArticleInclude && (
                     <td>
                       <div className={`col-sm-10"}`}>
