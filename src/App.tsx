@@ -47,7 +47,7 @@ function App() {
       <Toasts />
       <Modal />
 
-      <div className={`${showModal && "modal-open"}`}>
+      <div className={`page-wrap ${showModal && "modal-open"}`}>
         <Nav />
         <div className="container page-container">
           <Routes>

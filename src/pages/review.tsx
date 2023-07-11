@@ -69,8 +69,7 @@ function Review(props: any) {
               <strong>GPT Prompt:</strong> {foundReview?.gpt_prompt}
             </p>
             <button
-              style={{ width: "250px" }}
-              className="btn btn-dark"
+              className="btn btn-dark copy-prompt"
               onClick={() => {
                 navigator.clipboard.writeText(foundReview?.gpt_prompt);
               }}
